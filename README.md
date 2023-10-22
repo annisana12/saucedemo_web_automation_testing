@@ -10,5 +10,6 @@ Web automation testing using Selenium, Cucumber, Java, and Junit.
 - [JUnit](https://mvnrepository.com/artifact/org.junit.vintage/junit-vintage-engine/5.10.0)
 - [Cucumber Java](https://mvnrepository.com/artifact/io.cucumber/cucumber-java/7.14.0)
 - [Cucumber JUnit](https://mvnrepository.com/artifact/io.cucumber/cucumber-junit/7.14.0)
+- [Web Driver Manager](https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager/5.4.1)
 
 **Test Result:** /src/assets 

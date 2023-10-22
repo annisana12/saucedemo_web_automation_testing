@@ -7,9 +7,6 @@ import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-
-import java.util.List;
 
 public class SortingProducts {
     WebDriver driver;
@@ -35,7 +32,7 @@ public class SortingProducts {
     }
 
     @Then("user see products sorted in (.*) order by its (.*)$")
-    public void userSeeProductsSortedInOrderOrderByItsCategory(String order, String category) {
+    public void user_see_products_sorted_in_order_order_by_its_category(String order, String category) {
         SortHelper sortHelper = new SortHelper();
         boolean isInOrder = sortHelper.compareProducts(category, order, driver);
         Assert.assertTrue(isInOrder);

@@ -5,8 +5,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import java.time.Duration;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 
 public class CartHelper {
     public void addProductToCart(String product, WebDriver driver) {
@@ -15,12 +15,12 @@ public class CartHelper {
     }
 
     public int getTotalProductsInCart(WebDriver driver) {
-        // Selenium will wait for up to 3 seconds for elements to appear when using findElements
-        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+        // Selenium will wait for up to 2 seconds for elements to appear when using findElements
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
         List<WebElement> elements = driver.findElements(By.className("shopping_cart_badge"));
 
         // After finding the elements, we reset the implicit wait to avoid affecting subsequent operations.
-        driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(0));
 
         if (elements.size() != 0) {
             WebElement span = driver.findElement(By.xpath("//*[@id=\"shopping_cart_container\"]/a/span"));
